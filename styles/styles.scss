@@ -1,9 +1,10 @@
 #preloader {
     background: #0a192f url(images/square2-loading.gif) no-repeat center center;
     background-size: 20%;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     position: fixed;
+    top: 0;
     z-index: 100;
 }
 
