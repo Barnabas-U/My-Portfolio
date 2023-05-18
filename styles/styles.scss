@@ -818,9 +818,10 @@ nav {
                     transition: 0.5s ease;
     
                     &:hover {
-                        box-shadow: 0.2em 0.2em $Green;
-                        margin-right: 0.5em;
-                        margin-bottom: 0.5em;
+                        background-color: gray;
+                        box-shadow: 0.1em 0.1em $Green;
+                        margin-right: 0.3em;
+                        margin-bottom: 0.em;
                     }
                 }
             }
