@@ -807,6 +807,8 @@ nav {
                     }
                 }
                 .cv {
+                    position: absolute;
+                    right: 0;
                     color: $Green;
                     border: 0.1em solid $Green;
                     margin-top: 0;
