@@ -1,5 +1,42 @@
 const menuBar = document.querySelector('.menubar');
 const navLink = document.getElementById('nav-link');
+const mAbout = document.querySelector('.m-about');
+const mProjects = document.querySelector('.m-projects');
+const mContacts = document.querySelector('.m-contacts');
+var loader = document.getElementById('preloader');
+
+window.addEventListener("load", function() {
+    loader.style.display = "none";
+})
+
+function myFunction(x) {
+    x.classList.toggle("change");
+}
+
+mAbout.addEventListener('click', function(){
+    if (window.screen.width < 639) {
+        navLink.style.display = "none";
+        document.body.classList.remove("stop-scrolling");
+        menuBar.classList.toggle("change");
+
+    }
+});
+
+mProjects.addEventListener('click', function(){
+    if (window.screen.width < 639) {
+        navLink.style.display = "none";
+        document.body.classList.remove("stop-scrolling");
+        menuBar.classList.toggle("change");
+    }
+});
+
+mContacts.addEventListener('click', function(){
+    if (window.screen.width < 639) {
+        navLink.style.display = "none";
+        document.body.classList.remove("stop-scrolling");
+        menuBar.classList.toggle("change");
+    }
+});
 
 var previousScrollPosition = window.pageYOffset;
 window.onscroll = function() {

@@ -741,10 +741,14 @@ nav {
     margin-bottom: 1.5em;
   }
   .about p .freecode {
-    transform: 0.5s;
+    transform: 0.5s ease;
   }
   .about p .freecode:hover {
     border-bottom: 0.01em solid #64ffda;
+    color: #112240;
+    background-color: #64ffda;
+    font-weight: 700;
+    border-radius: 0.2em;
   }
   .about div .tech {
     width: 100%;

@@ -920,10 +920,14 @@ nav {
             margin-bottom: 1.5em;
 
             .freecode {
-                transform: 0.5s;
+                transform: 0.5s ease;
 
                 &:hover {
                     border-bottom: 0.01em solid $Green;
+                    color: $LightNavy;
+                    background-color: $Green;
+                    font-weight: 700;
+                    border-radius: 0.2em;
                 }
             }
         }
