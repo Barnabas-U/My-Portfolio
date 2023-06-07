@@ -811,7 +811,7 @@ nav {
                     right: 0;
                     color: $Green;
                     border: 0.1em solid $Green;
-                    margin-top: 0;
+                    margin-top: -2em;
                     padding-left: 1em;
                     padding-right: 1em;
                     padding-top: 0.5em;
@@ -820,10 +820,9 @@ nav {
                     transition: 0.5s ease;
     
                     &:hover {
-                        background-color: gray;
-                        box-shadow: 0.1em 0.1em $Green;
+                        box-shadow: 0.3em 0.3em $Green;
                         margin-right: 0.3em;
-                        margin-bottom: 0.em;
+                        margin-top: -2.3em;
                     }
                 }
             }
@@ -1025,12 +1024,15 @@ nav {
         }
 
         .project-div {
+            .j--1 { grid-area: j-01; }
+            .j-0 { grid-area: j-0; }
             .j-1 { grid-area: j-1; }
             .j-2 { grid-area: j-2; }
             .j-3 { grid-area: j-3; }
 
             display: grid;
             grid-template-areas:
+            'j-01 j-0'
             'j-1 j-2'
             'j-3 .';
             grid-gap: 1em;
@@ -1330,7 +1332,7 @@ nav {
 
         .do {
             color: $Slate;
-            font-size: 4em;
+            font-size: 3em;
             font-weight: 600;
             line-height: 1.3em;
             margin-bottom: 0.5em;
@@ -1508,13 +1510,16 @@ nav {
         }
 
         .project-div {
+            .j--1 { grid-area: j-01; }
+            .j-0 { grid-area: j-0; }
             .j-1 { grid-area: j-1; }
             .j-2 { grid-area: j-2; }
             .j-3 { grid-area: j-3; }
 
             display: grid;
             grid-template-areas:
-            'j-1 j-2 j-3';
+            'j-01 j-0 j-1'
+            'j-2 j-3 .';
             grid-gap: 1em;
 
             .jjj {
@@ -1647,8 +1652,10 @@ nav {
 
                 a {
                     color: $LightSlate;
-                    &:visited {
-                        color: $Green;
+                    transition: 0.3s ease;
+
+                    &:hover {
+                        color: $LightSlate;
                     }
                 }
             }

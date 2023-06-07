@@ -1,10 +1,11 @@
 #preloader {
   background: #0a192f url(images/square2-loading.gif) no-repeat center center;
   background-size: 20%;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   position: fixed;
-  z-index: 100;
+  top: 0;
+  z-index: 1000;
 }
 
 * {
@@ -654,9 +655,11 @@ nav {
     color: #64ffda;
   }
   nav #nav-link .all-link .cv {
+    position: absolute;
+    right: 0;
     color: #64ffda;
     border: 0.1em solid #64ffda;
-    margin-top: 0;
+    margin-top: -2em;
     padding-left: 1em;
     padding-right: 1em;
     padding-top: 0.5em;
@@ -665,9 +668,9 @@ nav {
     transition: 0.5s ease;
   }
   nav #nav-link .all-link .cv:hover {
-    box-shadow: 0.2em 0.2em #64ffda;
-    margin-right: 0.5em;
-    margin-bottom: 0.5em;
+    box-shadow: 0.3em 0.3em #64ffda;
+    margin-right: 0.3em;
+    margin-top: -2.3em;
   }
   nav .menubar {
     display: none;
@@ -816,8 +819,14 @@ nav {
   }
   .projects .project-div {
     display: grid;
-    grid-template-areas: "j-1 j-2" "j-3 .";
+    grid-template-areas: "j-01 j-0" "j-1 j-2" "j-3 .";
     grid-gap: 1em;
+  }
+  .projects .project-div .j--1 {
+    grid-area: j-01;
+  }
+  .projects .project-div .j-0 {
+    grid-area: j-0;
   }
   .projects .project-div .j-1 {
     grid-area: j-1;
@@ -1064,7 +1073,7 @@ nav {
   }
   .intro .do {
     color: #8892b0;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 600;
     line-height: 1.3em;
     margin-bottom: 0.5em;
@@ -1200,8 +1209,14 @@ nav {
   }
   .projects .project-div {
     display: grid;
-    grid-template-areas: "j-1 j-2 j-3";
+    grid-template-areas: "j-01 j-0 j-1" "j-2 j-3 .";
     grid-gap: 1em;
+  }
+  .projects .project-div .j--1 {
+    grid-area: j-01;
+  }
+  .projects .project-div .j-0 {
+    grid-area: j-0;
   }
   .projects .project-div .j-1 {
     grid-area: j-1;
@@ -1322,9 +1337,10 @@ nav {
   }
   .contacts footer .ref a {
     color: #a8b2d1;
+    transition: 0.3s ease;
   }
-  .contacts footer .ref a:visited {
-    color: #64ffda;
+  .contacts footer .ref a:hover {
+    color: #a8b2d1;
   }
   .contacts footer .email {
     display: flex;
