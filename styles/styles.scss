@@ -1,1846 +1,1880 @@
 #preloader {
-    background: #0a192f url(images/square2-loading.gif) no-repeat center center;
-    background-size: 20%;
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
+  background: #0a192f url(images/square2-loading.gif) no-repeat center center;
+  background-size: 20%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
 $navy: #0a192f;
-$LightNavy:	#112240;
-$LightestNavy:	#233554;
-$Slate:	#8892b0;
+$LightNavy: #112240;
+$LightestNavy: #233554;
+$Slate: #8892b0;
 $LightSlate: #a8b2d1;
-$LightestSlate:	#ccd6f6;
-$White:	#e6f1ff;
-$Green:	#64ffda;
+$LightestSlate: #ccd6f6;
+$White: #e6f1ff;
+$Green: #64ffda;
 
 * {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 p {
-    color: $Slate;
+  color: $Slate;
 }
 
 li {
-    h2 {
-        color: $LightestSlate;
-    }
+  h2 {
+    color: $LightestSlate;
+  }
 }
 
 body {
-    background-color: blue;
+  background-color: blue;
 }
 
 nav {
-    z-index: 100;
+  z-index: 100;
 }
 
 .freecode {
-    color: $Green;
+  color: $Green;
 }
 
 .hhh {
-    h3 {
-        font-size: medium;
-        font-weight: 500;
-        color: $Green;
-    }
+  h3 {
+    font-size: medium;
+    font-weight: 500;
+    color: $Green;
+  }
 
-    h2 {
-        font-weight: 600;
-        font-size: x-large;
-        color: $LightestSlate;
-    }
+  h2 {
+    font-weight: 600;
+    font-size: x-large;
+    color: $LightestSlate;
+  }
 }
 
 .a-1 {
-    background-image: url("images/github-24.png");
-    margin-right: 1em;
+  background-image: url("images/github-24.png");
+  margin-right: 1em;
 
-    &:hover {
-        background-image: url("images/hover--github-24.png");
-    }
+  &:hover {
+    background-image: url("images/hover--github-24.png");
+  }
 }
 
 .a-2 {
-    background-image: url("images/share-24.png");
+  background-image: url("images/share-24.png");
 
-    &:hover {
-        background-image: url("images/hover-share-24.png");
-    }
+  &:hover {
+    background-image: url("images/hover-share-24.png");
+  }
 }
 
 .stop-scrolling {
+  height: 100%;
 
-    height: 100%;
-    
-    overflow: hidden;
-    
+  overflow: hidden;
 }
 
-.reveal{
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: all 1s ease;
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 1s ease;
 }
 
-.reveal.active{
-    transform: translateY(0px);
-    opacity: 1;
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
 }
-
 
 .container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
 
 @media (min-width: 275px) {
-    body {
-        position: relative;
-        width: 100%;
-        padding: 0;
-        background-color: $navy;
+  body {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    background-color: $navy;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+
+  nav {
+    background-color: $navy;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 6em;
+    transition: top 0.5s ease;
+
+    #b-logo {
+      width: 3em;
+      padding: 0;
+      border: 0.2em solid $Green;
+      position: absolute;
+      left: 1.5em;
+      bottom: 1em;
     }
 
-    .container {
-        width: 100%;
-        padding-left: 1.5em;
-        padding-right: 1.5em;
-    }
+    #nav-link {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(0.5em);
+      width: 100%;
+      height: 102vh;
+      margin-top: 35em;
+      position: fixed;
+      transition: 1s;
 
-    nav {
-        background-color: $navy;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        height: 6em;
-        transition: top 0.5s ease;
-
-        #b-logo {
-            width: 3em;
-            padding: 0;
-            border: 0.2em solid $Green;
-            position: absolute;
-            left: 1.5em;
-            bottom: 1em;
-        }
-
-        #nav-link {
-            display: none;
-            flex-direction: column;
-            background-color: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(0.5em);
-            width: 100%;
-            height: 102vh;
-            margin-top: 35em;
-            position: fixed;
-            transition: 1s;
-            
-            .all-link {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                background-color: $LightNavy;
-                position: fixed;
-                margin-top: 1em;
-                right: 0;
-                top: 0;
-                height: 102vh;
-                width: 70%;
-
-                .ol {
-                    margin-top: 30%;
-
-                    div {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: space-between;
-
-                        p {
-                            color: $Green;
-                            margin-bottom: 0.5em;
-                            margin-top: 2em;
-                        }
-
-                        a {
-                            color: $LightestSlate;
-                        }
-                    }
-                }
-
-                .cv {
-                    color: $Green;
-                    border: 0.1em solid $Green;
-                    position: unset;
-                    margin-top: 2em;
-                    padding-left: 1.5em;
-                    padding-right: 1.5em;
-                    padding-top: 0.7em;
-                    padding-bottom: 0.7em;
-                    border-radius: 0.3em;
-                    transition: 0.5s;
-                }
-            }
-        }
-    
-        .menubar {
-            position: absolute;
-            right: 1em;
-            width: 2em;
-            height:1.5em;
-            bottom: 2em;
-            display: flex;
-            flex-direction: column;
-            align-items: end;
-            justify-content: space-between;
-
-            .bar1, .bar2, .bar3 {
-                background-color: $Green;
-                height: 0.1em;
-                transition: 0.4s;
-            }
-
-            .bar1 {
-                width: 100%;
-            }
-
-            .bar2 {
-                width: 80%;
-            }
-
-            .bar3 {
-                width: 100%;
-            }
-            
-        }
-    }
-
-        /* Rotate first bar */
-    .change .bar1 {
-        transform: translate(0, 11px) rotate(-45deg);
-    }
-    
-    /* Fade out the second bar */
-    .change .bar2 {opacity: 0;}
-    
-    /* Rotate last bar */
-    .change .bar3 {
-        transform: translate(0, -11px) rotate(45deg);
-    }
-
-
-    .intro {
-        padding-top: 14em;
-        height: 100vh;
-
-        .name {
-            color: $Green;
-            font-size: small;
-            font-weight: 500;
-            word-spacing: 5px;
-            margin-bottom: 1em;
-        }
-
-        .name1 {
-            color: $LightestSlate;
-            font-size: xx-large;
-            font-weight: 600;
-            line-height: 1.3em;
-        }
-
-        .do {
-            color: $Slate;
-            font-size: xx-large;
-            font-weight: 600;
-            line-height: 1.3em;
-            margin-bottom: 1em;
-        }
-
-        .me {
-            color: $Slate;
-            font-size: medium;
-        }
-        
-    }
-
-
-
-    .about {
-        position: relative;
-        margin-bottom: 7em;
-
-        .about-me {
-            position: relative;
-            margin-top: 10em;
-            display: flex;
-            align-items:baseline;
-            justify-content: space-between;
-            height: 5em;
-    
-            .me {
-                display: flex;
-                align-items:baseline;
-                justify-content: space-between;
-                height: 5em;
-                width: 10em;
-                margin-right: 1em;
-    
-    
-                h3 {
-                    font-size: medium;
-                    font-weight: 500;
-                    color: $Green;
-                }
-        
-                h2 {
-                    font-weight: 600;
-                    font-size: x-large;
-                    color: $LightestSlate;
-                }
-            }
-    
-            .line {
-                border-top: $Slate solid 0.1em;
-                width:50%;
-                height: 0.5em;
-            }
-            
-           
-        }
-
-        p {
-            font-size: small;
-            font-weight: 500;
-            margin-bottom: 1.5em;
-        }
-
-        div {
-
-
-            .tech {
-                width: 100%;
-                margin-bottom: 2em;    
-
-                .tech-div {
-                    display: flex;
-                    justify-content: space-between;
-                }
-
-                .techo {
-                    display: flex;
-                    width: 50%;
-
-                    img {
-                        width: 0.7em;
-                        height: 0.7em;
-                        margin-top: 0.3em;
-                        margin-right: 0.5em;
-                    }
-                }
-            }
-        }
-
-        .my-img {
-            position: relative;
-            width: 100%;
-            
-
-            
-            img {
-                position: absolute;
-                width: 70%;
-                height: 100%;
-                border-radius: 3%;
-                bottom: 1em;
-            }
-
-            div {
-                height: 30vh;
-                width: 70%;
-                border: $Green solid 0.1em;
-                border-radius: 3%;
-                margin-left: 1em;
-            }
-        }
-
-    }
-
-    .projects {
-        margin-bottom: 10em;
-        .aaa {
-            width: 100%;
-            height: 100%;
-        }
-
-        .project-header {
-            display: flex;
-            align-items:baseline;
-            margin-bottom: 1em;
-            
-            h3 {
-                margin-right: 0.5em;
-            }
-
-            h2 {
-                line-height: 1.2em;
-            }
-        }
-
-        .archive {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: $Green;
-            margin-bottom: 3em;
-        }
-
-        .project-div {
-
-            .jjj {
-                background-color: $LightNavy;
-                padding: 1.5em;
-                margin-bottom: 1.5em;
-
-                .j-icon-1 {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    margin-bottom: 2em;
-
-                    #folder {
-                        width: 2.4em;
-                    }
-
-                    div {
-                        display: flex;
-
-                        .a-1 {
-                            width: 3.2em;
-                            height: 1.5em;
-                            margin-right: 1em;
-                        }
-
-                        .a-2 {
-                            width: 3.2em;
-                            height: 1.5em;
-                        }
-                    }
-                }
-
-                h5 {
-                    color: $LightSlate;
-                    margin-bottom: 2em;
-                }
-
-                .j-tech {
-                    display: flex;
-                    font-size: small;
-                    gap: 2em;
-                }
-            }
-
-            h4 {
-                margin-bottom: 1em;
-                color: $LightestSlate;
-                font-size: x-large;
-                font-weight: 700;
-            }
-        }
-    }
-
-    .contacts {
-
+      .all-link {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        background-color: $LightNavy;
+        position: fixed;
+        margin-top: 1em;
+        right: 0;
+        top: 0;
+        height: 102vh;
+        width: 70%;
 
-        .contact-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: $Green;
-            margin-bottom: 0.5em;
+        .ol {
+          margin-top: 30%;
 
-            h3 {
-                margin-right: 0.5em;
-            }
-        }
-
-        .touch {
-            margin: auto;
-            color: $LightestSlate;
-            font-size: xx-large;
-            font-weight: 700;
-            margin-bottom: 0.5em;
-        }
-
-        .hello-btn {
-            color: $Green;
-            border: $Green solid 0.1em;
-            padding-left: 2em;
-            padding-right: 2em;
-            padding-top: 1em;
-            padding-bottom: 1em;
-            margin-top: 3em;
-            margin-bottom: 7em;
-        }
-
-        footer {
-            color: $LightSlate;
-
-            .ref {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                margin-bottom: 2em;
-                margin-top: 2em;
-
-                a {
-                    color: $Slate;
-                    &:visited {
-                        color: $Green;
-                    }
-                }
-            }
-
-        }
-
-        .contact-div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .contact-link {
-            width: 60%;
-            margin-bottom: 2em;
-
-            .contact-line {
-                display: none;
-            }
-
-            li {
-                width: 1.5em;
-                height: 1.5em;
-            }
-    
-            .github-l {
-                background-image: url("images/github-24.png");
-
-                &:hover {
-                    background-image: url("images/hover--github-24.png");
-                }
-            }
-
-            .twitter-l {
-                background-image: url("images/AA-twitter.png");
-
-                &:hover {
-                    background-image: url("images/GGG-twitter-24.png");
-                }
-            }
-
-            .linkedin-l {
-                background-image: url("images/linkedin.png");
-
-                &:hover {
-                    background-image: url("images/G-linkedin.png");
-                }
-            }
-        }
-    }
-
-    .archive-header {
-
-        h1 {
-            font-size: xx-large;
-            color: $LightestSlate;
-            font-weight: 700;
-        }
-
-        p {
-            color: $Green;
-            font-size: small;
-        }
-
-    }
-
-    table {
-        th {
-            color: $LightSlate;
-        }
-
-        .trrr {
-            transition: 0.3s;
-            &:hover {
-                background-color: $LightestNavy;
-            }
-        }
-
-        .year {
-            color: $Green;
-            padding-left: 0.3em;
-        }
-
-        .title {
-            font-size: medium;
-            font-weight: 600;
-            color: $White;
-        }
-
-        .build {
-            font-size: small;
-            font-weight: 400;
-            color: $Slate;
-        }
-
-        .archive-images {
-            display: flex;
-
-            .link-archive {
-                background-image: url('images/share-24.png');
-                width: 1.5em;
-                height: 1.5em;
-                margin-right: 1em;
-                transition: 0.3s;
-
-                &:hover {
-                    background-image: url('images/hover-share-24.png');
-                }
-            }
-            .github-archive {
-                background-image: url('images/github-24.png');
-                width: 1.5em;
-                height: 1.5em;
-                transition: 0.3s;
-
-                &:hover {
-                    background-image: url('images/hover--github-24.png');
-                }
-            }
-        }
-
-        
-    }
-
-    footer {
-        color: $LightSlate;
-
-        .ref {
+          div {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            margin-bottom: 2em;
-            margin-top: 2em;
+            justify-content: space-between;
+
+            p {
+              color: $Green;
+              margin-bottom: 0.5em;
+              margin-top: 2em;
+            }
 
             a {
-                color: $Slate;
-                &:visited {
-                    color: $Green;
-                }
+              color: $LightestSlate;
             }
+          }
         }
 
-    }
-
-            .contact-div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .cv {
+          color: $Green;
+          border: 0.1em solid $Green;
+          position: unset;
+          margin-top: 2em;
+          padding-left: 1.5em;
+          padding-right: 1.5em;
+          padding-top: 0.7em;
+          padding-bottom: 0.7em;
+          border-radius: 0.3em;
+          transition: 0.5s;
         }
 
-        .contact-link {
-            width: 60%;
-            margin-bottom: 2em;
-
-            .contact-line {
-                display: none;
-            }
-
-            li {
-                width: 1.5em;
-                height: 1.5em;
-            }
-    
-            .github-l {
-                background-image: url("images/github-24.png");
-
-                &:hover {
-                    background-image: url("images/hover--github-24.png");
-                }
-            }
-
-            .twitter-l {
-                background-image: url("images/AA-twitter.png");
-
-                &:hover {
-                    background-image: url("images/GGG-twitter-24.png");
-                }
-            }
-
-            .linkedin-l {
-                background-image: url("images/linkedin.png");
-
-                &:hover {
-                    background-image: url("images/G-linkedin.png");
-                }
-            }
+        .blog {
+          color: $Green;
+          border: 0.1em solid $Green;
+          position: unset;
+          margin-top: 2.5em;
+          padding-left: 2.5em;
+          padding-right: 2em;
+          padding-top: 0.7em;
+          padding-bottom: 0.7em;
+          border-radius: 0.3em;
+          transition: 0.5s;
         }
-
-}
-
-
-@media (min-width: 475px) {
-    .container {
-        max-width: 475px;
-    }
-} 
-
-
-@media (min-width: 640px) {
-    .container {
-        max-width: 640px;
-        padding-left: 5em;
-        padding-right: 5em;
+      }
     }
 
-    nav {
-        background-color: $navy;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: fixed;
+    .menubar {
+      position: absolute;
+      right: 1em;
+      width: 2em;
+      height: 1.5em;
+      bottom: 2em;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      justify-content: space-between;
+
+      .bar1,
+      .bar2,
+      .bar3 {
+        background-color: $Green;
+        height: 0.1em;
+        transition: 0.4s;
+      }
+
+      .bar1 {
         width: 100%;
-        height: 6em;
+      }
 
-        #b-logo {
-            width: 3em;
-            padding: 0;
-            border: 0.2em solid $Green;
-            position: unset;
-            margin-left: 3em;
-            transition: 0.5s;
+      .bar2 {
+        width: 80%;
+      }
 
-            &:hover {
-                box-shadow: 0.2em 0.2em $Green;
-                margin-left: 2.8em;
-                margin-top: -0.2em;
-            }
-        }
+      .bar3 {
+        width: 100%;
+      }
+    }
+  }
 
-        #nav-link {
-            flex-direction: row;
-            background-color: unset;
-            backdrop-filter: none;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 50%;
-            height: unset;
-            margin-top: unset;
-            margin-right: 3em;
-            font-size: small;
-            position: unset;
+  /* Rotate first bar */
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
 
-            .all-link {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                background-color: unset;
-                position: relative;
-                right: 0;
-                top: 0;
-                height: unset;
-                width: 100%;
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
 
-                .ol {
-                    position: relative;
-                    width: 70%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    color: $LightSlate;
-                    margin-right: 0em;
-                    margin-top: unset;
-                    margin-top: 0%;
-                    background-color: unset;
-    
-                    div {
-                        display: flex;
-                        flex-direction: row;
-                        align-items: baseline;
-                        justify-content: space-between;
-                        margin-left: 1.5em;
-    
-                        p {
-                            color: $Green;
-                            margin-right: 0.5em;
-                            margin-top: 0;
-                        }
-    
-                        a {
-                            transition: 0.5s;
-                                                
-                            &:hover {
-                                color: $Green;
-                            }
-                        }
-    
-    
-                    }
-                }
-                .cv {
-                    position: absolute;
-                    right: 0;
-                    color: $Green;
-                    border: 0.1em solid $Green;
-                    margin-top: -2em;
-                    padding-left: 1em;
-                    padding-right: 1em;
-                    padding-top: 0.5em;
-                    padding-bottom: 0.5em;
-                    border-radius: 0.3em;
-                    transition: 0.5s ease;
-    
-                    &:hover {
-                        box-shadow: 0.3em 0.3em $Green;
-                        margin-right: 0.3em;
-                        margin-top: -2.3em;
-                    }
-                }
-            }
+  /* Rotate last bar */
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
 
-            
-            
- 
+  .intro {
+    padding-top: 14em;
+    height: 100vh;
 
-
-        }
-    
-        .menubar {
-            display: none;
-        }
+    .name {
+      color: $Green;
+      font-size: small;
+      font-weight: 500;
+      word-spacing: 5px;
+      margin-bottom: 1em;
     }
 
-    .intro {
-        padding-top: 23em;
-        height: 100vh;
-
-        .name {
-            color: $Green;
-            font-size: medium;
-            font-weight: 500;
-            word-spacing: 5px;
-            margin-bottom: 1em;
-        }
-
-        .name1 {
-            color: $LightestSlate;
-            font-size: 3.5em;
-            font-weight: 700;
-            line-height: 1.3em;
-        }
-
-        .do {
-            color: $Slate;
-            font-size: 3.5em;
-            font-weight: 700;
-            line-height: 1.3em;
-            margin-bottom: 0.5em;
-        }
-
-        .me {
-            color: $Slate;
-            font-size:large;
-        }
-        
+    .name1 {
+      color: $LightestSlate;
+      font-size: xx-large;
+      font-weight: 600;
+      line-height: 1.3em;
     }
-    
+
+    .do {
+      color: $Slate;
+      font-size: xx-large;
+      font-weight: 600;
+      line-height: 1.3em;
+      margin-bottom: 1em;
+    }
+
+    .me {
+      color: $Slate;
+      font-size: medium;
+    }
+  }
+
+  .about {
+    position: relative;
+    margin-bottom: 7em;
 
     .about-me {
+      position: relative;
+      margin-top: 10em;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      height: 5em;
+
+      .me {
         display: flex;
-        align-items:baseline;
-        justify-content:left;
-        height: 5em;
-
-        .me {
-            display: flex;
-            align-items:baseline;
-            justify-content: space-between;
-            height: 5em;
-            width: 9em;
-            margin-right: 2em;
-
-
-            h3 {
-                font-size: medium;
-                font-weight: 500;
-                color: $Green;
-            }
-    
-            h2 {
-                font-weight: 600;
-                font-size: x-large;
-                color: $LightestSlate;
-            }
-        }
-
-        .line {
-            border-top: $Slate solid 0.1em;
-            width:50%;
-            height: 0.5em;
-        }
-        
-       
-    }
-
-    .about {
-        margin-bottom: 7em;
-
-        p {
-            font-size: large;
-            font-weight: 500;
-            margin-bottom: 1.5em;
-
-            .freecode {
-                transform: 0.5s ease;
-
-                &:hover {
-                    border-bottom: 0.01em solid $Green;
-                    color: $LightNavy;
-                    background-color: $Green;
-                    font-weight: 700;
-                    border-radius: 0.2em;
-                }
-            }
-        }
-
-        div {
-
-
-            .tech {
-                width: 100%;
-                margin-bottom: 2em;    
-
-                .tech-div {
-                    display: flex;
-                    justify-content: space-between;
-                }
-
-                .techo {
-                    display: flex;
-                    width: 50%;
-
-                    img {
-                        width: 0.7em;
-                        height: 0.7em;
-                        margin-top: 0.3em;
-                        margin-right: 0.5em;
-                    }
-                }
-            }
-        }
-
-        
-
-        
-        .my-img {
-            position: relative;
-            width: 100%;
-            
-
-            img {
-                position: absolute;
-                width: 70%;
-                height: 100%;
-                border-radius: 3%;
-                bottom: 1.5em;
-            }
-
-            div {
-                height: 30vh;
-                width: 70%;
-                border: $Green solid 0.1em;
-                border-radius: 3%;
-                margin-left: 1.5em;
-            }
-        }
-
-    }
-
-
-    .projects {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 15em;
-
-        .aaa {
-            width: 100%;
-            height: 100%;
-        }
-
-        .project-header {
-            display: flex;
-            align-items:baseline;
-            margin-bottom: 3em;
-            
-            h3 {
-                margin-right: 0.5em;
-            }
-
-            h2 {
-                line-height: 1.2em;
-            }
-        }
-
-        .archive {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: $Green;
-            margin-bottom: 2em;
-            width: 10em;
-            transition: 0.3s ease;
-
-            &:hover {
-                text-decoration: underline;
-                font-size: medium;
-            }
-        }
-
-        .project-div {
-            .j--1 { grid-area: j-01; }
-            .j-0 { grid-area: j-0; }
-            .j-1 { grid-area: j-1; }
-            .j-2 { grid-area: j-2; }
-            .j-3 { grid-area: j-3; }
-
-            display: grid;
-            grid-template-areas:
-            'j-01 j-0'
-            'j-1 j-2'
-            'j-3 .';
-            grid-gap: 1em;
-
-            .jjj {
-                position: relative;
-                background-color: $LightNavy;
-                padding: 1.5em;
-                margin-bottom: 0;
-
-                .j-icon-1 {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    margin-bottom: 2em;
-
-                    #folder {
-                        width: 2.4em;
-                    }
-
-                    div {
-                        display: flex;
-
-                        .a-1 {
-                            width: 3.2em;
-                            height: 1.5em;
-                            margin-right: 1em;
-                        }
-
-                        .a-2 {
-                            width: 3.2em;
-                            height: 1.5em;
-                        }
-                    }
-                }
-
-                h5 {
-                    color: $LightSlate;
-                    margin-bottom: 2em;
-                    font-size: medium;
-                }
-
-                .j-tech {
-                    position: absolute;
-                    bottom: 1em;
-                    display: flex;
-                    font-size: medium;
-                    gap: 2em;
-                }
-            }
-
-            h4 {
-                margin-bottom: 1em;
-                color: $LightestSlate;
-                font-size: x-large;
-                font-weight: 700;
-            }
-        }
-    }
-
-    .contacts {
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        .contact-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: $Green;
-            margin-bottom: 1em;
-
-            h3 {
-                margin-right: 0.5em;
-            }
-        }
-
-        .touch {
-            margin: auto;
-            color: $LightestSlate;
-            font-size: xx-large;
-            font-weight: 700;
-            margin-bottom: 0.5em;
-        }
-
-        p {
-            text-align: center;
-            line-height: 1.7em;
-        }
-
-        .hello-btn {
-            color: $Green;
-            border: $Green solid 0.1em;
-            border-radius: 0.3em;
-            padding-left: 2em;
-            padding-right: 2em;
-            padding-top: 1em;
-            padding-bottom: 1em;
-            margin-top: 3em;
-            margin-bottom: 7em;
-        }
-
-        footer {
-            color: $LightSlate;
-            position: relative;
-
-            .ref {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                margin-bottom: 2em;
-                margin-top: 2em;
-
-                a {
-                    &:visited {
-                        color: $Green;
-                    }
-                }
-            }
-
-            .email {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                flex-direction: column;
-                position: fixed;
-                bottom: 0;
-                right: 0;
-                width: 10%;
-
-                .email-p {
-                    writing-mode: vertical-rl;
-                    text-orientation: mixed;
-
-                }
-
-                div {
-                    height: 10em;
-                    width: 0.01em;
-                    background-color: $Slate;
-                    margin-top: 3em;
-                }
-            }
-
-        }
-
-        .contact-div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50%;
-        }
-
-        .contact-link {
-            height: 30%;
-            width: 10%;
-            margin-bottom: 2em;
-            flex-direction: column-reverse;
-            position: fixed;
-            bottom: -2em;
-            left: 0;
-
-            .contact-line {
-                display: block;
-                height: 10em;
-                width: 0.01em;
-                background-color: $Slate;
-            }
-
-            li {
-                width: 1.5em;
-                height: 1.5em;
-            }
-    
-            .github-l {
-                background-image: url("images/github-24.png");
-
-                &:hover {
-                    background-image: url("images/hover--github-24.png");
-                }
-            }
-
-            .twitter-l {
-                background-image: url("images/AA-twitter.png");
-
-                &:hover {
-                    background-image: url("images/GGG-twitter-24.png");
-                }
-            }
-
-            .linkedin-l {
-                background-image: url("images/linkedin.png");
-
-                &:hover {
-                    background-image: url("images/G-linkedin.png");
-                }
-            }
-        }
-    }
-
-    .archive-header {
-
-        h1 {
-            font-size: xx-large;
-            color: $LightestSlate;
-            font-weight: 700;
-        }
-
-        p {
-            color: $Green;
-            font-size: small;
-        }
-
-    }
-
-    table {
-        th {
-            color: $LightSlate;
-        }
-
-        .year {
-            color: $Green;
-            padding-left: 0.3em;
-        }
-
-        .title {
-            font-size: medium;
-            font-weight: 600;
-            color: $White;
-        }
-    }
-}
-
-
-@media (min-width: 768px) {
-    .container {
-        max-width: 768px;
-    }
-}
-
-
-@media (min-width: 1024px) {
-    .container {
-        max-width: 1024px;
-        padding-left: 6.5em;
-        padding-right: 6.5em;
-    }
-
-    nav {
-        background-color: $navy;
-        display: flex;
-        align-items: center;
+        align-items: baseline;
         justify-content: space-between;
-        position: fixed;
-        width: 100%;
-        height: 6em;
-
-        #b-logo {
-            width: 3em;
-            padding: 0;
-            border: 0.2em solid $Green;
-            border-radius: 0.3em;
-            position: unset;
-            margin-left: 3em;
-            transition: 0.3s;
-
-            &:hover {
-                box-shadow: 0.2em 0.2em $Green;
-                margin-left: 2.8em;
-                margin-top: -0.5em;
-            }
-        }
-    
-    }
-
-    .intro {
-        padding-top: 10em;
-        height: 100vh;
-
-        .name {
-            color: $Green;
-            font-size: medium;
-            font-weight: 500;
-            word-spacing: 5px;
-            margin-bottom: 1em;
-        }
-
-        .name1 {
-            color: $LightestSlate;
-            font-size: 4.5em;
-            font-weight: 600;
-            line-height: 1.3em;
-        }
-
-        .do {
-            color: $Slate;
-            font-size: 3em;
-            font-weight: 600;
-            line-height: 1.3em;
-            margin-bottom: 0.5em;
-        }
-
-        .me {
-            color: $Slate;
-            font-size:large;
-            width: 65%;
-        }
-        
-    }
-    
-
-    .about-me {
-        display: flex;
-        align-items:baseline;
-        justify-content:left;
         height: 5em;
+        width: 10em;
+        margin-right: 1em;
+
+        h3 {
+          font-size: medium;
+          font-weight: 500;
+          color: $Green;
+        }
+
+        h2 {
+          font-weight: 600;
+          font-size: x-large;
+          color: $LightestSlate;
+        }
+      }
+
+      .line {
+        border-top: $Slate solid 0.1em;
         width: 50%;
-
-        .me {
-            display: flex;
-            align-items:baseline;
-            justify-content: space-between;
-            height: 5em;
-            width: 13em;
-            margin-right: 2em;
-
-
-            h3 {
-                font-size: large;
-                font-weight: 500;
-                color: $Green;
-            }
-    
-            h2 {
-                font-weight: 600;
-                font-size: xx-large;
-                color: $LightestSlate;
-            }
-        }
-
-        .line {
-            border-top: $Slate solid 0.1em;
-            width:50%;
-            height: 0.5em;
-        }
-        
-       
+        height: 0.5em;
+      }
     }
 
-    .about {
-        position: relative;
-        margin-bottom: 7em;
-
-        .tx-about, .tx-about2, .div-tech {
-            width: 55%;
-        }
-
-        p {
-            font-size: medium;
-            font-weight: 500;
-            margin-bottom: 1.5em;
-        }
-
-        div {
-
-
-            .tech {
-                width: 100%;
-                margin-bottom: 2em;    
-
-                .tech-div {
-                    display: flex;
-                    justify-content: space-between;
-                }
-
-                .techo {
-                    display: flex;
-                    width: 50%;
-
-                    p {
-                        font-size: x-small;
-                    }
-
-                    img {
-                        width: 0.7em;
-                        height: 0.7em;
-                        margin-top: 0.3em;
-                        margin-right: 0.5em;
-                    }
-                }
-            }
-        }
-
-        
-
-        
-        .my-img {
-            position: absolute;
-            top: 7em;
-            right: 0;
-            width: 40%;
-            height: 50%;
-            transition: 0.3s;
-
-            &:hover {
-                width: 40.5%;
-                height: 50.5%;
-            }
-            
-
-            img {
-                position: absolute;
-                width: 70%;
-                height: 100%;
-                border-radius: 3%;
-                bottom: 1.5em;
-
-                
-            }
-
-            div {
-                height: 30vh;
-                width: 70%;
-                height: 100%;
-                border: $Green solid 0.1em;
-                border-radius: 3%;
-                margin-left: 1.5em;
-                transition: 0.3s;
-
-                &:hover {
-                    margin-left: 1.7em;
-                    margin-top: 0.2em;
-                }
-            }
-        }
-
+    p {
+      font-size: small;
+      font-weight: 500;
+      margin-bottom: 1.5em;
     }
 
+    div {
+      .tech {
+        width: 100%;
+        margin-bottom: 2em;
 
-    .projects {
-        margin-bottom: 10em;
-
-        .aaa {
-            width: 100%;
-            height: 100%;
+        .tech-div {
+          display: flex;
+          justify-content: space-between;
         }
 
-        .project-header {
-            display: flex;
-            align-items:baseline;
-            justify-content: center;
-            margin-bottom: 1em;
-            
-            h3 {
-                font-size: large;
-                margin-right: 0.5em;
-            }
+        .techo {
+          display: flex;
+          width: 50%;
 
-            h2 {
-                font-size: xx-large;
-                line-height: 1.2em;
-            }
+          img {
+            width: 0.7em;
+            height: 0.7em;
+            margin-top: 0.3em;
+            margin-right: 0.5em;
+          }
         }
-
-        .archive {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: $Green;
-            margin-bottom: 2em;
-            word-spacing: 0.4em;
-        }
-
-        .project-div {
-            .j--1 { grid-area: j-01; }
-            .j-0 { grid-area: j-0; }
-            .j-1 { grid-area: j-1; }
-            .j-2 { grid-area: j-2; }
-            .j-3 { grid-area: j-3; }
-
-            display: grid;
-            grid-template-areas:
-            'j-01 j-0 j-1'
-            'j-2 j-3 .';
-            grid-gap: 1em;
-
-            .jjj {
-                cursor: pointer;
-                position: relative;
-                background-color: $LightNavy;
-                padding: 1.5em;
-                border: 0.2em solid $LightNavy;
-                transition: 0.3s;
-
-                &:hover {
-                    border: 0.2em solid $LightestNavy;
-                }
-
-                .j-icon-1 {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    margin-bottom: 2em;
-
-                    #folder {
-                        width: 2em;
-                    }
-
-                    div {
-                        display: flex;
-
-                        .a-1 {
-                            width: 3.2em;
-                            height: 1.5em;
-                            margin-right: 1em;
-                            transition: 0.3s;
-                            
-                        }
-
-                        .a-2 {
-                            width: 3.2em;
-                            height: 1.5em;
-                            transition: 0.3s;
-                        }
-                    }
-                }
-
-                h5 {
-                    color: $LightSlate;
-                    margin-bottom: 2em;
-                    font-size: small;
-                }
-
-                .j-tech {
-                    position: absolute;
-                    bottom: 1em;
-                    display: flex;
-                    font-size: small;
-                    gap: 2em;
-                }
-            }
-
-            h4 {
-                margin-bottom: 1em;
-                color: $LightestSlate;
-                font-size: large;
-                font-weight: 700;
-            }
-        }
-    }
-
-    .contacts {
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        .contact-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: $Green;
-            margin-bottom: 1em;
-
-            h3 {
-                margin-right: 0.5em;
-            }
-        }
-
-        .touch {
-            margin: auto;
-            color: $LightestSlate;
-            font-size: 3em;
-            font-weight: 700;
-            margin-bottom: 0em;
-        }
-
-        p {
-            width: 70%;
-            text-align: center;
-            line-height: 1.7em;
-        }
-
-        .hello-btn {
-            color: $Green;
-            border: $Green solid 0.1em;
-            padding-left: 2em;
-            padding-right: 2em;
-            padding-top: 1em;
-            padding-bottom: 1em;
-            margin-top: 1em;
-            margin-bottom: 5em;
-            transition: 0.5s;
-
-            &:hover {
-                background-color: $Green;
-                color: $navy;
-                font-weight: 400;
-            }
-        }
-
-        footer {
-            color: $LightSlate;
-            position: relative;
-
-            .ref {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                margin-bottom: 2em;
-                margin-top: 2em;
-
-                a {
-                    color: $LightSlate;
-                    transition: 0.3s ease;
-
-                    &:hover {
-                        color: $LightSlate;
-                    }
-                }
-            }
-
-            .email {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                flex-direction: column;
-                position: fixed;
-                bottom: 0;
-                right: 0;
-                width: 10%;
-
-                .email-p {
-                    font-size: small;
-                    writing-mode: vertical-rl;
-                    text-orientation: mixed;
-                    transition: 0.3s ease;
-
-                    &:hover {
-                        color: $Green;
-                    }
-
-                }
-
-                div {
-                    margin-right: 0.3em;
-                    height: 10em;
-                    width: 0.01em;
-                    background-color: $Slate;
-                    margin-top: 1em;
-                }
-            }
-
-        }
-
-        .contact-div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 70%;
-        }
-
-        .contact-link {
-            height: 50%;
-            width: 10%;
-            margin-bottom: 2em;
-            flex-direction: column-reverse;
-            position: fixed;
-            bottom: -2em;
-            left: 0;
-
-            .contact-line {
-                display: block;
-                height: 10em;
-                width: 0.01em;
-                background-color: $Slate;
-            }
-
-            li {
-                width: 1.5em;
-                height: 1.5em;
-            }
-    
-            .github-l {
-                background-image: url("images/github-24.png");
-                transition: 0.3s ease;
-
-                &:hover {
-                    background-image: url("images/hover--github-24.png");
-                    margin-right: 0.5em;
-
-                }
-            }
-
-            .twitter-l {
-                background-image: url("images/AA-twitter.png");
-                transition: 0.3s ease;
-
-                &:hover {
-                    background-image: url("images/GGG-twitter-24.png");
-                    margin-right: 0.5em;
-                }
-            }
-
-            .linkedin-l {
-                background-image: url("images/linkedin.png");
-                transition: 0.3s ease;
-
-                &:hover {
-                    background-image: url("images/G-linkedin.png");
-                    margin-right: 0.5em;
-                }
-            }
-        }
-    }
-
-    .archive-header {
-
-        h1 {
-            font-size: xx-large;
-            color: $LightestSlate;
-            font-weight: 700;
-        }
-
-        p {
-            color: $Green;
-            font-size: small;
-        }
-
-    }
-
-    table {
-        th {
-            color: $LightSlate;
-        }
-
-        .year {
-            color: $Green;
-            padding-left: 0.3em;
-        }
-
-        .title {
-            font-size: medium;
-            font-weight: 600;
-            color: $White;
-        }
-    }
-}
-
-
-@media (min-width: 1280px) {
-    .container {
-        max-width: 1280px;
+      }
     }
 
     .my-img {
+      position: relative;
+      width: 100%;
+
+      img {
         position: absolute;
-        top: 7em;
-        right: 0;
-        width: 40%;
+        width: 70%;
         height: 100%;
+        border-radius: 3%;
+        bottom: 1em;
+      }
+
+      div {
+        height: 30vh;
+        width: 70%;
+        border: $Green solid 0.1em;
+        border-radius: 3%;
+        margin-left: 1em;
+      }
+    }
+  }
+
+  .projects {
+    margin-bottom: 10em;
+    .aaa {
+      width: 100%;
+      height: 100%;
+    }
+
+    .project-header {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 1em;
+
+      h3 {
+        margin-right: 0.5em;
+      }
+
+      h2 {
+        line-height: 1.2em;
+      }
+    }
+
+    .archive {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $Green;
+      margin-bottom: 3em;
+    }
+
+    .project-div {
+      .jjj {
+        background-color: $LightNavy;
+        padding: 1.5em;
+        margin-bottom: 1.5em;
+
+        .j-icon-1 {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 2em;
+
+          #folder {
+            width: 2.4em;
+          }
+
+          div {
+            display: flex;
+
+            .a-1 {
+              width: 3.2em;
+              height: 1.5em;
+              margin-right: 1em;
+            }
+
+            .a-2 {
+              width: 3.2em;
+              height: 1.5em;
+            }
+          }
+        }
+
+        h5 {
+          color: $LightSlate;
+          margin-bottom: 2em;
+        }
+
+        .j-tech {
+          display: flex;
+          font-size: small;
+          gap: 2em;
+        }
+      }
+
+      h4 {
+        margin-bottom: 1em;
+        color: $LightestSlate;
+        font-size: x-large;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .contact-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $Green;
+      margin-bottom: 0.5em;
+
+      h3 {
+        margin-right: 0.5em;
+      }
+    }
+
+    .touch {
+      margin: auto;
+      color: $LightestSlate;
+      font-size: xx-large;
+      font-weight: 700;
+      margin-bottom: 0.5em;
+    }
+
+    .hello-btn {
+      color: $Green;
+      border: $Green solid 0.1em;
+      padding-left: 2em;
+      padding-right: 2em;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      margin-top: 3em;
+      margin-bottom: 7em;
+    }
+
+    footer {
+      color: $LightSlate;
+
+      .ref {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2em;
+        margin-top: 2em;
+
+        a {
+          color: $Slate;
+          &:visited {
+            color: $Green;
+          }
+        }
+      }
+    }
+
+    .contact-div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-link {
+      width: 60%;
+      margin-bottom: 2em;
+
+      .contact-line {
+        display: none;
+      }
+
+      li {
+        width: 1.5em;
+        height: 1.5em;
+      }
+
+      .github-l {
+        background-image: url("images/github-24.png");
+
+        &:hover {
+          background-image: url("images/hover--github-24.png");
+        }
+      }
+
+      .twitter-l {
+        background-image: url("images/AA-twitter.png");
+
+        &:hover {
+          background-image: url("images/GGG-twitter-24.png");
+        }
+      }
+
+      .linkedin-l {
+        background-image: url("images/linkedin.png");
+
+        &:hover {
+          background-image: url("images/G-linkedin.png");
+        }
+      }
+    }
+  }
+
+  .archive-header {
+    h1 {
+      font-size: xx-large;
+      color: $LightestSlate;
+      font-weight: 700;
+    }
+
+    p {
+      color: $Green;
+      font-size: small;
+    }
+  }
+
+  table {
+    th {
+      color: $LightSlate;
+    }
+
+    .trrr {
+      transition: 0.3s;
+      &:hover {
+        background-color: $LightestNavy;
+      }
+    }
+
+    .year {
+      color: $Green;
+      padding-left: 0.3em;
+    }
+
+    .title {
+      font-size: medium;
+      font-weight: 600;
+      color: $White;
+    }
+
+    .build {
+      font-size: small;
+      font-weight: 400;
+      color: $Slate;
+    }
+
+    .archive-images {
+      display: flex;
+
+      .link-archive {
+        background-image: url("images/share-24.png");
+        width: 1.5em;
+        height: 1.5em;
+        margin-right: 1em;
         transition: 0.3s;
 
         &:hover {
-            width: 40.5%;
-            height: 30.5%;
+          background-image: url("images/hover-share-24.png");
         }
-        
+      }
+      .github-archive {
+        background-image: url("images/github-24.png");
+        width: 1.5em;
+        height: 1.5em;
+        transition: 0.3s;
 
-        img {
-            position: absolute;
-            width: 70%;
-            height: 100%;
-            border-radius: 3%;
-            bottom: 1.5em;
+        &:hover {
+          background-image: url("images/hover--github-24.png");
+        }
+      }
+    }
+  }
 
-            
+  footer {
+    color: $LightSlate;
+
+    .ref {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2em;
+      margin-top: 2em;
+
+      a {
+        color: $Slate;
+        &:visited {
+          color: $Green;
+        }
+      }
+    }
+  }
+
+  .contact-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-link {
+    width: 60%;
+    margin-bottom: 2em;
+
+    .contact-line {
+      display: none;
+    }
+
+    li {
+      width: 1.5em;
+      height: 1.5em;
+    }
+
+    .github-l {
+      background-image: url("images/github-24.png");
+
+      &:hover {
+        background-image: url("images/hover--github-24.png");
+      }
+    }
+
+    .twitter-l {
+      background-image: url("images/AA-twitter.png");
+
+      &:hover {
+        background-image: url("images/GGG-twitter-24.png");
+      }
+    }
+
+    .linkedin-l {
+      background-image: url("images/linkedin.png");
+
+      &:hover {
+        background-image: url("images/G-linkedin.png");
+      }
+    }
+  }
+}
+
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+
+  nav {
+    background-color: $navy;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 6em;
+
+    #b-logo {
+      width: 3em;
+      padding: 0;
+      border: 0.2em solid $Green;
+      position: unset;
+      margin-left: 3em;
+      transition: 0.5s;
+
+      &:hover {
+        box-shadow: 0.2em 0.2em $Green;
+        margin-left: 2.8em;
+        margin-top: -0.2em;
+      }
+    }
+
+    #nav-link {
+      flex-direction: row;
+      background-color: unset;
+      backdrop-filter: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 60%;
+      height: unset;
+      margin-top: unset;
+      margin-right: 3em;
+      font-size: small;
+      position: unset;
+
+      .all-link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: unset;
+        position: relative;
+        right: 0;
+        top: 0;
+        height: unset;
+        width: 100%;
+
+        .ol {
+          position: relative;
+          width: 60%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          color: $LightSlate;
+          margin-right: 0em;
+          margin-top: unset;
+          margin-top: 0%;
+          background-color: unset;
+
+          div {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-between;
+            margin-left: 1.5em;
+
+            p {
+              color: $Green;
+              margin-right: 0.5em;
+              margin-top: 0;
+            }
+
+            a {
+              transition: 0.5s;
+
+              &:hover {
+                color: $Green;
+              }
+            }
+          }
+        }
+
+        .blog {
+          position: absolute;
+          right: 7em;
+          color: $Green;
+          border: 0.1em solid $Green;
+          margin-top: -2em;
+          padding-left: 1em;
+          padding-right: 1em;
+          padding-top: 0.5em;
+          padding-bottom: 0.5em;
+          border-radius: 0.3em;
+          transition: 0.5s ease;
+
+          &:hover {
+            box-shadow: 0.3em 0.3em $Green;
+            margin-right: 0.3em;
+            margin-top: -2.3em;
+          }
+        }
+
+        .cv {
+          position: absolute;
+          right: 0;
+          color: $Green;
+          border: 0.1em solid $Green;
+          margin-top: -2em;
+          padding-left: 1em;
+          padding-right: 1em;
+          padding-top: 0.5em;
+          padding-bottom: 0.5em;
+          border-radius: 0.3em;
+          transition: 0.5s ease;
+
+          &:hover {
+            box-shadow: 0.3em 0.3em $Green;
+            margin-right: 0.3em;
+            margin-top: -2.3em;
+          }
+        }
+      }
+    }
+
+    .menubar {
+      display: none;
+    }
+  }
+
+  .intro {
+    padding-top: 23em;
+    height: 100vh;
+
+    .name {
+      color: $Green;
+      font-size: medium;
+      font-weight: 500;
+      word-spacing: 5px;
+      margin-bottom: 1em;
+    }
+
+    .name1 {
+      color: $LightestSlate;
+      font-size: 3.5em;
+      font-weight: 700;
+      line-height: 1.3em;
+    }
+
+    .do {
+      color: $Slate;
+      font-size: 3.5em;
+      font-weight: 700;
+      line-height: 1.3em;
+      margin-bottom: 0.5em;
+    }
+
+    .me {
+      color: $Slate;
+      font-size: large;
+    }
+  }
+
+  .about-me {
+    display: flex;
+    align-items: baseline;
+    justify-content: left;
+    height: 5em;
+
+    .me {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      height: 5em;
+      width: 9em;
+      margin-right: 2em;
+
+      h3 {
+        font-size: medium;
+        font-weight: 500;
+        color: $Green;
+      }
+
+      h2 {
+        font-weight: 600;
+        font-size: x-large;
+        color: $LightestSlate;
+      }
+    }
+
+    .line {
+      border-top: $Slate solid 0.1em;
+      width: 50%;
+      height: 0.5em;
+    }
+  }
+
+  .about {
+    margin-bottom: 7em;
+
+    p {
+      font-size: large;
+      font-weight: 500;
+      margin-bottom: 1.5em;
+
+      .freecode {
+        transform: 0.5s ease;
+
+        &:hover {
+          border-bottom: 0.01em solid $Green;
+          color: $LightNavy;
+          background-color: $Green;
+          font-weight: 700;
+          border-radius: 0.2em;
+        }
+      }
+    }
+
+    div {
+      .tech {
+        width: 100%;
+        margin-bottom: 2em;
+
+        .tech-div {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .techo {
+          display: flex;
+          width: 50%;
+
+          img {
+            width: 0.7em;
+            height: 0.7em;
+            margin-top: 0.3em;
+            margin-right: 0.5em;
+          }
+        }
+      }
+    }
+
+    .my-img {
+      position: relative;
+      width: 100%;
+
+      img {
+        position: absolute;
+        width: 70%;
+        height: 100%;
+        border-radius: 3%;
+        bottom: 1.5em;
+      }
+
+      div {
+        height: 30vh;
+        width: 70%;
+        border: $Green solid 0.1em;
+        border-radius: 3%;
+        margin-left: 1.5em;
+      }
+    }
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15em;
+
+    .aaa {
+      width: 100%;
+      height: 100%;
+    }
+
+    .project-header {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 3em;
+
+      h3 {
+        margin-right: 0.5em;
+      }
+
+      h2 {
+        line-height: 1.2em;
+      }
+    }
+
+    .archive {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $Green;
+      margin-bottom: 2em;
+      width: 10em;
+      transition: 0.3s ease;
+
+      &:hover {
+        text-decoration: underline;
+        font-size: medium;
+      }
+    }
+
+    .project-div {
+      .j--1 {
+        grid-area: j-01;
+      }
+      .j-0 {
+        grid-area: j-0;
+      }
+      .j-1 {
+        grid-area: j-1;
+      }
+      .j-2 {
+        grid-area: j-2;
+      }
+      .j-3 {
+        grid-area: j-3;
+      }
+
+      display: grid;
+      grid-template-areas:
+        "j-01 j-0"
+        "j-1 j-2"
+        "j-3 .";
+      grid-gap: 1em;
+
+      .jjj {
+        position: relative;
+        background-color: $LightNavy;
+        padding: 1.5em;
+        margin-bottom: 0;
+
+        .j-icon-1 {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 2em;
+
+          #folder {
+            width: 2.4em;
+          }
+
+          div {
+            display: flex;
+
+            .a-1 {
+              width: 3.2em;
+              height: 1.5em;
+              margin-right: 1em;
+            }
+
+            .a-2 {
+              width: 3.2em;
+              height: 1.5em;
+            }
+          }
+        }
+
+        h5 {
+          color: $LightSlate;
+          margin-bottom: 2em;
+          font-size: medium;
+        }
+
+        .j-tech {
+          position: absolute;
+          bottom: 1em;
+          display: flex;
+          font-size: medium;
+          gap: 2em;
+        }
+      }
+
+      h4 {
+        margin-bottom: 1em;
+        color: $LightestSlate;
+        font-size: x-large;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .contact-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $Green;
+      margin-bottom: 1em;
+
+      h3 {
+        margin-right: 0.5em;
+      }
+    }
+
+    .touch {
+      margin: auto;
+      color: $LightestSlate;
+      font-size: xx-large;
+      font-weight: 700;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      text-align: center;
+      line-height: 1.7em;
+    }
+
+    .hello-btn {
+      color: $Green;
+      border: $Green solid 0.1em;
+      border-radius: 0.3em;
+      padding-left: 2em;
+      padding-right: 2em;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      margin-top: 3em;
+      margin-bottom: 7em;
+    }
+
+    footer {
+      color: $LightSlate;
+      position: relative;
+
+      .ref {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2em;
+        margin-top: 2em;
+
+        a {
+          &:visited {
+            color: $Green;
+          }
+        }
+      }
+
+      .email {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 10%;
+
+        .email-p {
+          writing-mode: vertical-rl;
+          text-orientation: mixed;
         }
 
         div {
-            height: 30vh;
-            width: 70%;
-            height: 100%;
-            border: $Green solid 0.1em;
-            border-radius: 3%;
-            margin-left: 1.5em;
-            transition: 0.3s;
-
-            &:hover {
-                margin-left: 1.7em;
-                margin-top: 0.2em;
-            }
+          height: 10em;
+          width: 0.01em;
+          background-color: $Slate;
+          margin-top: 3em;
         }
+      }
     }
-} 
 
+    .contact-div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+    }
+
+    .contact-link {
+      height: 30%;
+      width: 10%;
+      margin-bottom: 2em;
+      flex-direction: column-reverse;
+      position: fixed;
+      bottom: -2em;
+      left: 0;
+
+      .contact-line {
+        display: block;
+        height: 10em;
+        width: 0.01em;
+        background-color: $Slate;
+      }
+
+      li {
+        width: 1.5em;
+        height: 1.5em;
+      }
+
+      .github-l {
+        background-image: url("images/github-24.png");
+
+        &:hover {
+          background-image: url("images/hover--github-24.png");
+        }
+      }
+
+      .twitter-l {
+        background-image: url("images/AA-twitter.png");
+
+        &:hover {
+          background-image: url("images/GGG-twitter-24.png");
+        }
+      }
+
+      .linkedin-l {
+        background-image: url("images/linkedin.png");
+
+        &:hover {
+          background-image: url("images/G-linkedin.png");
+        }
+      }
+    }
+  }
+
+  .archive-header {
+    h1 {
+      font-size: xx-large;
+      color: $LightestSlate;
+      font-weight: 700;
+    }
+
+    p {
+      color: $Green;
+      font-size: small;
+    }
+  }
+
+  table {
+    th {
+      color: $LightSlate;
+    }
+
+    .year {
+      color: $Green;
+      padding-left: 0.3em;
+    }
+
+    .title {
+      font-size: medium;
+      font-weight: 600;
+      color: $White;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding-left: 6.5em;
+    padding-right: 6.5em;
+  }
+
+  nav {
+    background-color: $navy;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 6em;
+
+    #b-logo {
+      width: 3em;
+      padding: 0;
+      border: 0.2em solid $Green;
+      border-radius: 0.3em;
+      position: unset;
+      margin-left: 3em;
+      transition: 0.3s;
+
+      &:hover {
+        box-shadow: 0.2em 0.2em $Green;
+        margin-left: 2.8em;
+        margin-top: -0.5em;
+      }
+    }
+
+    #nav-link {
+      width: 45%;
+    }
+  }
+
+  .intro {
+    padding-top: 10em;
+    height: 100vh;
+
+    .name {
+      color: $Green;
+      font-size: medium;
+      font-weight: 500;
+      word-spacing: 5px;
+      margin-bottom: 1em;
+    }
+
+    .name1 {
+      color: $LightestSlate;
+      font-size: 4.5em;
+      font-weight: 600;
+      line-height: 1.3em;
+    }
+
+    .do {
+      color: $Slate;
+      font-size: 3em;
+      font-weight: 600;
+      line-height: 1.3em;
+      margin-bottom: 0.5em;
+    }
+
+    .me {
+      color: $Slate;
+      font-size: large;
+      width: 65%;
+    }
+  }
+
+  .about-me {
+    display: flex;
+    align-items: baseline;
+    justify-content: left;
+    height: 5em;
+    width: 50%;
+
+    .me {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      height: 5em;
+      width: 13em;
+      margin-right: 2em;
+
+      h3 {
+        font-size: large;
+        font-weight: 500;
+        color: $Green;
+      }
+
+      h2 {
+        font-weight: 600;
+        font-size: xx-large;
+        color: $LightestSlate;
+      }
+    }
+
+    .line {
+      border-top: $Slate solid 0.1em;
+      width: 50%;
+      height: 0.5em;
+    }
+  }
+
+  .about {
+    position: relative;
+    margin-bottom: 7em;
+
+    .tx-about,
+    .tx-about2,
+    .div-tech {
+      width: 55%;
+    }
+
+    p {
+      font-size: medium;
+      font-weight: 500;
+      margin-bottom: 1.5em;
+    }
+
+    div {
+      .tech {
+        width: 100%;
+        margin-bottom: 2em;
+
+        .tech-div {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .techo {
+          display: flex;
+          width: 50%;
+
+          p {
+            font-size: x-small;
+          }
+
+          img {
+            width: 0.7em;
+            height: 0.7em;
+            margin-top: 0.3em;
+            margin-right: 0.5em;
+          }
+        }
+      }
+    }
+
+    .my-img {
+      position: absolute;
+      top: 7em;
+      right: 0;
+      width: 40%;
+      height: 50%;
+      transition: 0.3s;
+
+      &:hover {
+        width: 40.5%;
+        height: 50.5%;
+      }
+
+      img {
+        position: absolute;
+        width: 70%;
+        height: 100%;
+        border-radius: 3%;
+        bottom: 1.5em;
+      }
+
+      div {
+        height: 30vh;
+        width: 70%;
+        height: 100%;
+        border: $Green solid 0.1em;
+        border-radius: 3%;
+        margin-left: 1.5em;
+        transition: 0.3s;
+
+        &:hover {
+          margin-left: 1.7em;
+          margin-top: 0.2em;
+        }
+      }
+    }
+  }
+
+  .projects {
+    margin-bottom: 10em;
+
+    .aaa {
+      width: 100%;
+      height: 100%;
+    }
+
+    .project-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      margin-bottom: 1em;
+
+      h3 {
+        font-size: large;
+        margin-right: 0.5em;
+      }
+
+      h2 {
+        font-size: xx-large;
+        line-height: 1.2em;
+      }
+    }
+
+    .archive {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $Green;
+      margin-bottom: 2em;
+      word-spacing: 0.4em;
+    }
+
+    .project-div {
+      .j--1 {
+        grid-area: j-01;
+      }
+      .j-0 {
+        grid-area: j-0;
+      }
+      .j-1 {
+        grid-area: j-1;
+      }
+      .j-2 {
+        grid-area: j-2;
+      }
+      .j-3 {
+        grid-area: j-3;
+      }
+
+      display: grid;
+      grid-template-areas:
+        "j-01 j-0 j-1"
+        "j-2 j-3 .";
+      grid-gap: 1em;
+
+      .jjj {
+        cursor: pointer;
+        position: relative;
+        background-color: $LightNavy;
+        padding: 1.5em;
+        border: 0.2em solid $LightNavy;
+        transition: 0.3s;
+
+        &:hover {
+          border: 0.2em solid $LightestNavy;
+        }
+
+        .j-icon-1 {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 2em;
+
+          #folder {
+            width: 2em;
+          }
+
+          div {
+            display: flex;
+
+            .a-1 {
+              width: 3.2em;
+              height: 1.5em;
+              margin-right: 1em;
+              transition: 0.3s;
+            }
+
+            .a-2 {
+              width: 3.2em;
+              height: 1.5em;
+              transition: 0.3s;
+            }
+          }
+        }
+
+        h5 {
+          color: $LightSlate;
+          margin-bottom: 2em;
+          font-size: small;
+        }
+
+        .j-tech {
+          position: absolute;
+          bottom: 1em;
+          display: flex;
+          font-size: small;
+          gap: 2em;
+        }
+      }
+
+      h4 {
+        margin-bottom: 1em;
+        color: $LightestSlate;
+        font-size: large;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .contact-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $Green;
+      margin-bottom: 1em;
+
+      h3 {
+        margin-right: 0.5em;
+      }
+    }
+
+    .touch {
+      margin: auto;
+      color: $LightestSlate;
+      font-size: 3em;
+      font-weight: 700;
+      margin-bottom: 0em;
+    }
+
+    p {
+      width: 70%;
+      text-align: center;
+      line-height: 1.7em;
+    }
+
+    .hello-btn {
+      color: $Green;
+      border: $Green solid 0.1em;
+      padding-left: 2em;
+      padding-right: 2em;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      margin-top: 1em;
+      margin-bottom: 5em;
+      transition: 0.5s;
+
+      &:hover {
+        background-color: $Green;
+        color: $navy;
+        font-weight: 400;
+      }
+    }
+
+    footer {
+      color: $LightSlate;
+      position: relative;
+
+      .ref {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2em;
+        margin-top: 2em;
+
+        a {
+          color: $LightSlate;
+          transition: 0.3s ease;
+
+          &:hover {
+            color: $LightSlate;
+          }
+        }
+      }
+
+      .email {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 10%;
+
+        .email-p {
+          font-size: small;
+          writing-mode: vertical-rl;
+          text-orientation: mixed;
+          transition: 0.3s ease;
+
+          &:hover {
+            color: $Green;
+          }
+        }
+
+        div {
+          margin-right: 0.3em;
+          height: 10em;
+          width: 0.01em;
+          background-color: $Slate;
+          margin-top: 1em;
+        }
+      }
+    }
+
+    .contact-div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 70%;
+    }
+
+    .contact-link {
+      height: 50%;
+      width: 10%;
+      margin-bottom: 2em;
+      flex-direction: column-reverse;
+      position: fixed;
+      bottom: -2em;
+      left: 0;
+
+      .contact-line {
+        display: block;
+        height: 10em;
+        width: 0.01em;
+        background-color: $Slate;
+      }
+
+      li {
+        width: 1.5em;
+        height: 1.5em;
+      }
+
+      .github-l {
+        background-image: url("images/github-24.png");
+        transition: 0.3s ease;
+
+        &:hover {
+          background-image: url("images/hover--github-24.png");
+          margin-right: 0.5em;
+        }
+      }
+
+      .twitter-l {
+        background-image: url("images/AA-twitter.png");
+        transition: 0.3s ease;
+
+        &:hover {
+          background-image: url("images/GGG-twitter-24.png");
+          margin-right: 0.5em;
+        }
+      }
+
+      .linkedin-l {
+        background-image: url("images/linkedin.png");
+        transition: 0.3s ease;
+
+        &:hover {
+          background-image: url("images/G-linkedin.png");
+          margin-right: 0.5em;
+        }
+      }
+    }
+  }
+
+  .archive-header {
+    h1 {
+      font-size: xx-large;
+      color: $LightestSlate;
+      font-weight: 700;
+    }
+
+    p {
+      color: $Green;
+      font-size: small;
+    }
+  }
+
+  table {
+    th {
+      color: $LightSlate;
+    }
+
+    .year {
+      color: $Green;
+      padding-left: 0.3em;
+    }
+
+    .title {
+      font-size: medium;
+      font-weight: 600;
+      color: $White;
+    }
+  }
+
+  .blog-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3em;
+
+    h1 {
+      color: $Green;
+      font-size: 4em;
+      font-weight: 700;
+      margin-left: 0.5em;
+      margin-bottom: 1em;
+    }
+
+    #blog-card {
+      background-color: $LightestNavy;
+      width: 50%;
+      height: 50%;
+      padding: 2em;
+      margin: 1em;
+      border-radius: 1em;
+      transition: ease 0.3s;
+
+      &:hover {
+        background-color: $LightNavy;
+        padding: 2.3em;
+      }
+
+      a {
+        font-size: larger;
+        font-weight: 700;
+        color: $LightestSlate;
+        transition: ease 0.3s;
+
+        &:hover {
+          color: $Green;
+        }
+      }
+
+      div {
+        margin-top: 2em;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+
+  .my-img {
+    position: absolute;
+    top: 7em;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    transition: 0.3s;
+
+    &:hover {
+      width: 40.5%;
+      height: 30.5%;
+    }
+
+    img {
+      position: absolute;
+      width: 70%;
+      height: 100%;
+      border-radius: 3%;
+      bottom: 1.5em;
+    }
+
+    div {
+      height: 30vh;
+      width: 70%;
+      height: 100%;
+      border: $Green solid 0.1em;
+      border-radius: 3%;
+      margin-left: 1.5em;
+      transition: 0.3s;
+
+      &:hover {
+        margin-left: 1.7em;
+        margin-top: 0.2em;
+      }
+    }
+  }
+}
 
 @media (min-width: 1536px) {
-    .container {
-        max-width: 1536px;
-    }
+  .container {
+    max-width: 1536px;
+  }
 }

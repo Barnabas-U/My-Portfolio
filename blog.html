@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio/Blog</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="styles/images/B-logo.png" />
+  </head>
+  <body class="flex flex-col items-center justify-center relative">
+    <div id="preloader"></div>
+
+    <nav class="">
+      <a href="https://barnabasukagha.netlify.app/"
+        ><img src="/styles/images/my5-icon.png" alt="B-logo" id="b-logo"
+      /></a>
+      <div id="nav-link" class="nav-link">
+        <div class="all-link">
+          <div class="ol">
+            <div>
+              <p>01.</p>
+              <a href="https://barnabasukagha.netlify.app/#about">About</a>
+            </div>
+            <div>
+              <p>02.</p>
+              <a href="https://barnabasukagha.netlify.app/#projects"
+                >Projects</a
+              >
+            </div>
+            <div>
+              <p>03.</p>
+              <a href="https://barnabasukagha.netlify.app/#contacts">Contact</a>
+            </div>
+          </div>
+          <a
+            href="https://drive.google.com/file/d/1qaBO4xcOX6cVMLAVcc2dY2PG2F6XkBER/view?usp=sharing"
+            ><p class="cv">Resume</p></a
+          >
+        </div>
+      </div>
+      <div class="menubar" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </nav>
+
+    <div class="blog-section container pl-12 mt-20 pt-20">
+      <h1>My Blog Posts</h1>
+      <div id="blog-card">
+        <a
+          href="https://dev.to/mcbarna/enhancing-jquery-dom-manipulation-best-practices-for-optimal-performance-3ai8"
+          ><h2>
+            Enhancing jQuery DOM Manipulation: Best Practices for Optimal
+            Performance.
+          </h2></a
+        >
+        <div>
+          <p id="platform">dev.to</p>
+          <p id="date-posted">Dec 26, 2023</p>
+          <p id="language">English</p>
+        </div>
+      </div>
+      <div id="blog-card">
+        <a
+          href="https://dev.to/mcbarna/difference-between-vanilla-javascript-jquery-and-when-best-to-use-them-46bn"
+          ><h2>
+            Difference Between Vanilla JavaScript & jQuery, And When Best To Use
+            Them.
+          </h2></a
+        >
+        <div>
+          <p id="platform">dev.to</p>
+          <p id="date-posted">Dec 18, 2023</p>
+          <p id="language">English</p>
+        </div>
+      </div>
+      <div id="blog-card">
+        <a
+          href="https://dev.to/mcbarna/create-a-simple-random-quote-generator-using-jquery-and-advice-slip-api-1n5j"
+          ><h2>
+            Create a Simple Random Quote Generator Using Jquery and Advice Slip
+            Api
+          </h2></a
+        >
+        <div>
+          <p id="platform">dev.to</p>
+          <p id="date-posted">Dec 8, 2023</p>
+          <p id="language">English</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="contact-div">
+        <ul class="contact-link flex items-center justify-between">
+          <li class="contact-line"></li>
+          <a href="https://github.com/Barnabas-U"><li class="github-l"></li></a>
+          <a href="https://twitter.com/iammcbarna"
+            ><li class="twitter-l"></li
+          ></a>
+          <a href="https://www.linkedin.com/in/barnabas-ukagha-33059121b/"
+            ><li class="linkedin-l"></li
+          ></a>
+        </ul>
+      </div>
+      <div class="email">
+        <a href="mailto:barnabas.ukagha1@gmail.com"
+          ><p class="email-p">barnabas.ukagha1@gmail.com</p></a
+        >
+        <div></div>
+      </div>
+
+      <div class="ref">
+        <a href="https://github.com/bchiang7/v4" class="mb-5"
+          >Designed By Brittany Chiang</a
+        >
+        <p class="mb-5">&</p>
+        <a href="" class="mb-5">Built By Barnabas Ukagha</a>
+      </div>
+    </footer>
+
+    <script>
+      var loader = document.getElementById("preloader");
+
+      window.addEventListener("load", function () {
+        loader.style.display = "none";
+      });
+
+      function myFunction(x) {
+        x.classList.toggle("change");
+      }
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

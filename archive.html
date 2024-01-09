@@ -1,212 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio/Archive</title>
-    <link rel="stylesheet" href="/styles/styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/x-icon" href="styles/images/B-logo.png">
-</head>
-<body class="flex flex-col items-center justify-center relative ">
-
-    <div id="preloader" ></div>
+    <link rel="icon" type="image/x-icon" href="styles/images/B-logo.png" />
+  </head>
+  <body class="flex flex-col items-center justify-center relative">
+    <div id="preloader"></div>
 
     <nav class="">
-        <a href="https://euphonious-torrone-dbf56e.netlify.app/"><img src="/styles/images/my5-icon.png" alt="B-logo" id="b-logo"></a>
-        <div id="nav-link" class="nav-link">
-            
-            <div class="all-link">
-                <div class="ol">
-                    <div><p>01.</p><a href="https://euphonious-torrone-dbf56e.netlify.app/#about">About</a></div>
-                    <div><p>02.</p><a href="https://euphonious-torrone-dbf56e.netlify.app/#projects">Projects</a></div>
-                    <div><p>03.</p><a href="https://euphonious-torrone-dbf56e.netlify.app/#contacts">Contact</a></div>
-                </div>
-                <a href="https://drive.google.com/file/d/1qaBO4xcOX6cVMLAVcc2dY2PG2F6XkBER/view?usp=sharing"><p class="cv">Resume</p></a>
+      <a href="https://barnabasukagha.netlify.app/"
+        ><img src="/styles/images/my5-icon.png" alt="B-logo" id="b-logo"
+      /></a>
+      <div id="nav-link" class="nav-link">
+        <div class="all-link">
+          <div class="ol">
+            <div>
+              <p>01.</p>
+              <a href="https://barnabasukagha.netlify.app/#about">About</a>
             </div>
+            <div>
+              <p>02.</p>
+              <a href="https://barnabasukagha.netlify.app/#projects"
+                >Projects</a
+              >
+            </div>
+            <div>
+              <p>03.</p>
+              <a href="https://barnabasukagha.netlify.app/#contacts">Contact</a>
+            </div>
+          </div>
+          <a href="https://barnabasukagha.netlify.app/blog"
+            ><p class="blog">Blog</p></a
+          >
+          <a
+            href="https://drive.google.com/file/d/1qaBO4xcOX6cVMLAVcc2dY2PG2F6XkBER/view?usp=sharing"
+            ><p class="cv">Resume</p></a
+          >
         </div>
-        <div class="menubar" onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
+      </div>
+      <div class="menubar" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
     </nav>
 
     <div class="archive-header container pl-8 mt-20 pt-10">
-        <h1>Archive</h1>
-        <p>A big list of things I've worked on</p>
+      <h1>Archive</h1>
+      <p>A big list of things I've worked on</p>
     </div>
 
     <table class="w-10/12 my-8 table-auto border">
-        <tr>
-            <th class="font-bold p-2 border-b text-left">Year</th>
-            <th class="font-bold p-2 border-b text-left">Title</th>
-            <th class="builder font-bold p-2 border-b text-left">Built With</th>
-            <th class="font-bold py-2 px-4 border-b text-left">Link</th>
-        </tr>
+      <tr>
+        <th class="font-bold p-2 border-b text-left">Year</th>
+        <th class="font-bold p-2 border-b text-left">Title</th>
+        <th class="builder font-bold p-2 border-b text-left">Built With</th>
+        <th class="font-bold py-2 px-4 border-b text-left">Link</th>
+      </tr>
 
-        <tr class="trrr">
-            <td class="year py-2 border-b text-left">2023</td>
-            <td class="title py-2 border-b text-left">Space Tourism</td>
-            <td class="build py-2 border-b text-left">HTML | SCSS | jQuery</td>
-            <td class="py-2 px-4 border-b text-left">
-                <div class="archive-images">
-                    <a href="https://sweet-peony-eff726.netlify.app/"><div class="link-archive"></div></a>
-                    <a href="https://github.com/Barnabas-U/space-tourism-multi-page-website"><div class="github-archive"></div></a>
-                </div>
-            </td>
-        </tr>
+      <tr class="trrr">
+        <td class="year py-2 border-b text-left">2023</td>
+        <td class="title py-2 border-b text-left">Space Tourism</td>
+        <td class="build py-2 border-b text-left">HTML | SCSS | jQuery</td>
+        <td class="py-2 px-4 border-b text-left">
+          <div class="archive-images">
+            <a href="https://sweet-peony-eff726.netlify.app/"
+              ><div class="link-archive"></div
+            ></a>
+            <a
+              href="https://github.com/Barnabas-U/space-tourism-multi-page-website"
+              ><div class="github-archive"></div
+            ></a>
+          </div>
+        </td>
+      </tr>
 
-        <tr class="trrr">
-            <td class="year py-2 border-b text-left">2023</td>
-            <td class="title py-2 border-b text-left">Rock-scissors-paper</td>
-            <td class="build py-2 border-b text-left">HTML | SCSS | JAVASCRIPT</td>
-            <td class="py-2 px-4 border-b text-left">
-                <div class="archive-images">
-                    <a href="https://storied-liger-ac1af4.netlify.app/"><div class="link-archive"></div></a>
-                    <a href="https://github.com/Barnabas-U/Rock-scossors-paper-Game"><div class="github-archive"></div></a>
-                </div>
-            </td>
-        </tr>
+      <tr class="trrr">
+        <td class="year py-2 border-b text-left">2023</td>
+        <td class="title py-2 border-b text-left">Rock-scissors-paper</td>
+        <td class="build py-2 border-b text-left">HTML | SCSS | JAVASCRIPT</td>
+        <td class="py-2 px-4 border-b text-left">
+          <div class="archive-images">
+            <a href="https://storied-liger-ac1af4.netlify.app/"
+              ><div class="link-archive"></div
+            ></a>
+            <a href="https://github.com/Barnabas-U/Rock-scossors-paper-Game"
+              ><div class="github-archive"></div
+            ></a>
+          </div>
+        </td>
+      </tr>
 
-        <tr class="trrr">
-            <td class="year py-2 border-b text-left">2023</td>
-            <td class="title py-2 border-b text-left">Multi-Step Form</td>
-            <td class="build py-2 border-b text-left">HTML | CSS | JAVASCRIPT</td>
-            <td class="py-2 px-4 border-b text-left">
-                <div class="archive-images">
-                    <a href="https://voluble-trifle-9b5542.netlify.app/"><div class="link-archive"></div></a>
-                    <a href="https://github.com/Barnabas-U/Multi-step-form"><div class="github-archive"></div></a>
-                </div>
-            </td>
-        </tr>
+      <tr class="trrr">
+        <td class="year py-2 border-b text-left">2023</td>
+        <td class="title py-2 border-b text-left">Multi-Step Form</td>
+        <td class="build py-2 border-b text-left">HTML | CSS | JAVASCRIPT</td>
+        <td class="py-2 px-4 border-b text-left">
+          <div class="archive-images">
+            <a href="https://voluble-trifle-9b5542.netlify.app/"
+              ><div class="link-archive"></div
+            ></a>
+            <a href="https://github.com/Barnabas-U/Multi-step-form"
+              ><div class="github-archive"></div
+            ></a>
+          </div>
+        </td>
+      </tr>
 
-        <tr class="trrr">
-            <td class="year py-2 border-b text-left">2023</td>
-            <td class="title py-2 border-b text-left">Tesla Homepage Clone</td>
-            <td class="build py-2 border-b text-left">HTML | CSS | JAVASCRIPT</td>
-            <td class="py-2 px-4 border-b text-left">
-                <div class="archive-images">
-                    <a href="https://gregarious-lolly-b0319f.netlify.app/"><div class="link-archive"></div></a>
-                    <a href="https://github.com/Barnabas-U/tesla-homepage"><div class="github-archive"></div></a>
-                </div>
-            </td>
-        </tr>
+      <tr class="trrr">
+        <td class="year py-2 border-b text-left">2023</td>
+        <td class="title py-2 border-b text-left">Tesla Homepage Clone</td>
+        <td class="build py-2 border-b text-left">HTML | CSS | JAVASCRIPT</td>
+        <td class="py-2 px-4 border-b text-left">
+          <div class="archive-images">
+            <a href="https://gregarious-lolly-b0319f.netlify.app/"
+              ><div class="link-archive"></div
+            ></a>
+            <a href="https://github.com/Barnabas-U/tesla-homepage"
+              ><div class="github-archive"></div
+            ></a>
+          </div>
+        </td>
+      </tr>
 
-        <tr class="trrr">
-            <td class="year py-2 border-b text-left">2023</td>
-            <td class="title py-2 border-b text-left">Age Calculator</td>
-            <td class="build py-2 border-b text-left">HTML | CSS | JAVASCRIPT</td>
-            <td class="py-2 px-4 border-b text-left">
-                <div class="archive-images">
-                    <a href="https://startling-liger-af8715.netlify.app/"><div class="link-archive"></div></a>
-                    <a href="https://github.com/Barnabas-U/Age-Calculator"><div class="github-archive"></div></a>
-                </div>
-            </td>
-        </tr>
+      <tr class="trrr">
+        <td class="year py-2 border-b text-left">2023</td>
+        <td class="title py-2 border-b text-left">Age Calculator</td>
+        <td class="build py-2 border-b text-left">HTML | CSS | JAVASCRIPT</td>
+        <td class="py-2 px-4 border-b text-left">
+          <div class="archive-images">
+            <a href="https://startling-liger-af8715.netlify.app/"
+              ><div class="link-archive"></div
+            ></a>
+            <a href="https://github.com/Barnabas-U/Age-Calculator"
+              ><div class="github-archive"></div
+            ></a>
+          </div>
+        </td>
+      </tr>
 
-        <tr class="trrr">
-            <td class="year py-2 border-b text-left">2023</td>
-            <td class="title py-2 border-b text-left">News Homepage</td>
-            <td class="build py-2 border-b text-left">HTML | CSS | JAVASCRIPT</td>
-            <td class="py-2 px-4 border-b text-left">
-                <div class="archive-images">
-                    <a href="https://stately-otter-b2b05e.netlify.app/"><div class="link-archive"></div></a>
-                    <a href="https://github.com/Barnabas-U/news-hompage"><div class="github-archive"></div></a>
-                </div>
-            </td>
-        </tr>
+      <tr class="trrr">
+        <td class="year py-2 border-b text-left">2023</td>
+        <td class="title py-2 border-b text-left">News Homepage</td>
+        <td class="build py-2 border-b text-left">HTML | CSS | JAVASCRIPT</td>
+        <td class="py-2 px-4 border-b text-left">
+          <div class="archive-images">
+            <a href="https://stately-otter-b2b05e.netlify.app/"
+              ><div class="link-archive"></div
+            ></a>
+            <a href="https://github.com/Barnabas-U/news-hompage"
+              ><div class="github-archive"></div
+            ></a>
+          </div>
+        </td>
+      </tr>
 
-        <tr class="trrr">
-            <td class="year py-2 border-b text-left">2023</td>
-            <td class="title py-2 border-b text-left">QR Code Component</td>
-            <td class="build py-2 border-b text-left">HTML | CSS</td>
-            <td class="py-2 px-4 border-b text-left">
-                <div class="archive-images">
-                    <a href="https://dapper-donut-5b99b9.netlify.app/"><div class="link-archive"></div></a>
-                    <a href="https://github.com/Barnabas-U/QR-code-component"><div class="github-archive"></div></a>
-                </div>
-            </td>
-        </tr>
+      <tr class="trrr">
+        <td class="year py-2 border-b text-left">2023</td>
+        <td class="title py-2 border-b text-left">QR Code Component</td>
+        <td class="build py-2 border-b text-left">HTML | CSS</td>
+        <td class="py-2 px-4 border-b text-left">
+          <div class="archive-images">
+            <a href="https://dapper-donut-5b99b9.netlify.app/"
+              ><div class="link-archive"></div
+            ></a>
+            <a href="https://github.com/Barnabas-U/QR-code-component"
+              ><div class="github-archive"></div
+            ></a>
+          </div>
+        </td>
+      </tr>
 
-        <tr class="trrr">
-            <td class="year py-2 border-b text-left">2023</td>
-            <td class="title py-2 border-b text-left">Apple Homepage Clone</td>
-            <td class="build py-2 border-b text-left">HTML | CSS | JAVASCRIPT</td>
-            <td class="py-2 px-4 border-b text-left">
-                <div class="archive-images">
-                    <a href="https://dainty-biscochitos-2fd698.netlify.app/"><div class="link-archive"></div></a>
-                    <a href="https://github.com/Barnabas-U/AppleHomePage"><div class="github-archive"></div></a>
-                </div>
-            </td>
-        </tr>
+      <tr class="trrr">
+        <td class="year py-2 border-b text-left">2023</td>
+        <td class="title py-2 border-b text-left">Apple Homepage Clone</td>
+        <td class="build py-2 border-b text-left">HTML | CSS | JAVASCRIPT</td>
+        <td class="py-2 px-4 border-b text-left">
+          <div class="archive-images">
+            <a href="https://dainty-biscochitos-2fd698.netlify.app/"
+              ><div class="link-archive"></div
+            ></a>
+            <a href="https://github.com/Barnabas-U/AppleHomePage"
+              ><div class="github-archive"></div
+            ></a>
+          </div>
+        </td>
+      </tr>
 
-        <tr class="trrr">
-            <td class="year py-2 border-b text-left">2023</td>
-            <td class="title py-2 border-b text-left">An interactive Form</td>
-            <td class="build py-2 border-b text-left">HTML | CSS | JAVASCRIPT</td>
-            <td class="py-2 px-4 border-b text-left">
-                <div class="archive-images">
-                    <a href="https://bespoke-sherbet-252c29.netlify.app/"><div class="link-archive"></div></a>
-                    <a href="https://github.com/Barnabas-U/Bform"><div class="github-archive"></div></a>
-                </div>
-            </td>
-        </tr>
+      <tr class="trrr">
+        <td class="year py-2 border-b text-left">2023</td>
+        <td class="title py-2 border-b text-left">An interactive Form</td>
+        <td class="build py-2 border-b text-left">HTML | CSS | JAVASCRIPT</td>
+        <td class="py-2 px-4 border-b text-left">
+          <div class="archive-images">
+            <a href="https://bespoke-sherbet-252c29.netlify.app/"
+              ><div class="link-archive"></div
+            ></a>
+            <a href="https://github.com/Barnabas-U/Bform"
+              ><div class="github-archive"></div
+            ></a>
+          </div>
+        </td>
+      </tr>
 
-        <tr class="trrr">
-            <td class="year py-2 border-b text-left">2022</td>
-            <td class="title py-2 border-b text-left">Interior Design Website</td>
-            <td class="build py-2 border-b text-left">HTML | CSS | JAVASCRIPT</td>
-            <td class="py-2 px-4 border-b text-left">
-                <div class="archive-images">
-                    <a href="https://stupendous-chaja-396347.netlify.app/"><div class="link-archive"></div></a>
-                    <a href=""><div class="github-archive"></div></a>
-                </div>
-            </td>
-        </tr>
+      <tr class="trrr">
+        <td class="year py-2 border-b text-left">2022</td>
+        <td class="title py-2 border-b text-left">Interior Design Website</td>
+        <td class="build py-2 border-b text-left">HTML | CSS | JAVASCRIPT</td>
+        <td class="py-2 px-4 border-b text-left">
+          <div class="archive-images">
+            <a href="https://stupendous-chaja-396347.netlify.app/"
+              ><div class="link-archive"></div
+            ></a>
+            <a href=""><div class="github-archive"></div></a>
+          </div>
+        </td>
+      </tr>
     </table>
 
     <footer>
-                    
-        <div class="contact-div">
-            <ul class="contact-link flex items-center justify-between">
-                <li class="contact-line"></li>
-                <a href="https://github.com/Barnabas-U"><li class="github-l"></li></a>
-                <a href="https://twitter.com/iammcbarna"><li class="twitter-l"></li></a>
-                <a href="https://www.linkedin.com/in/barnabas-ukagha-33059121b/"><li class="linkedin-l"></li></a>
-            </ul>
-            
-        </div>
-        <div class="email">
-            <a href="mailto:barnabas.ukagha1@gmail.com"><p class="email-p">barnabas.ukagha1@gmail.com</p></a>
-            <div></div>
-        </div>
+      <div class="contact-div">
+        <ul class="contact-link flex items-center justify-between">
+          <li class="contact-line"></li>
+          <a href="https://github.com/Barnabas-U"><li class="github-l"></li></a>
+          <a href="https://twitter.com/iammcbarna"
+            ><li class="twitter-l"></li
+          ></a>
+          <a href="https://www.linkedin.com/in/barnabas-ukagha-33059121b/"
+            ><li class="linkedin-l"></li
+          ></a>
+        </ul>
+      </div>
+      <div class="email">
+        <a href="mailto:barnabas.ukagha1@gmail.com"
+          ><p class="email-p">barnabas.ukagha1@gmail.com</p></a
+        >
+        <div></div>
+      </div>
 
-        <div class="ref">
-            <a href="https://github.com/bchiang7/v4" class="mb-5">Designed By Brittany Chiang</a>
-            <p class="mb-5">&</p>
-            <a href="" class="mb-5">Built By Barnabas Ukagha</a>
-        </div>
+      <div class="ref">
+        <a href="https://github.com/bchiang7/v4" class="mb-5"
+          >Designed By Brittany Chiang</a
+        >
+        <p class="mb-5">&</p>
+        <a href="" class="mb-5">Built By Barnabas Ukagha</a>
+      </div>
     </footer>
 
     <script>
-        var loader = document.getElementById('preloader');
+      var loader = document.getElementById("preloader");
 
-        window.addEventListener("load", function() {
-            loader.style.display = "none";
-        })
+      window.addEventListener("load", function () {
+        loader.style.display = "none";
+      });
 
-        function myFunction(x) {
-            x.classList.toggle("change");
-        }
+      function myFunction(x) {
+        x.classList.toggle("change");
+      }
     </script>
 
     <script src="script.js"></script>
-    
-</body>
+  </body>
 </html>
