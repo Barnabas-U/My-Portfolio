@@ -577,6 +577,37 @@ nav {
   .contact-link .linkedin-l:hover {
     background-image: url("images/G-linkedin.png");
   }
+  .blog-section {
+    width: 100%;
+    margin-bottom: 3em;
+  }
+  .blog-section h1 {
+    color: #64ffda;
+    font-size: xx-large;
+    font-weight: 700;
+    margin-left: 0em;
+    margin-bottom: 1em;
+  }
+  .blog-section #blog-card {
+    background-color: #233554;
+    width: 90%;
+    height: 50%;
+    padding: 2em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+  }
+  .blog-section #blog-card a {
+    font-size: large;
+    font-weight: 700;
+    color: #ccd6f6;
+  }
+  .blog-section #blog-card div {
+    margin-top: 2em;
+    width: 100%;
+  }
+  .blog-section #blog-card div p {
+    font-weight: 600;
+  }
 }
 @media (min-width: 475px) {
   .container {

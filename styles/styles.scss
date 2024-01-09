@@ -695,6 +695,43 @@ nav {
       }
     }
   }
+
+  .blog-section {
+    width: 100%;
+    margin-bottom: 3em;
+
+    h1 {
+      color: $Green;
+      font-size: xx-large;
+      font-weight: 700;
+      margin-left: 0em;
+      margin-bottom: 1em;
+    }
+
+    #blog-card {
+      background-color: $LightestNavy;
+      width: 90%;
+      height: 50%;
+      padding: 2em;
+      margin-bottom: 1em;
+      border-radius: 1em;
+
+      a {
+        font-size: large;
+        font-weight: 700;
+        color: $LightestSlate;
+      }
+
+      div {
+        margin-top: 2em;
+        width: 100%;
+
+        p {
+          font-weight: 600;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 475px) {
